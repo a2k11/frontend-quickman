@@ -26,9 +26,8 @@ const Inner = styled.div`
 
 injectGlobal`
   @font-face {
-    font-family: 'Roboto', sans-serif;
-    src: url()('/static/Roboto-Medium.ttf')
-    format('ttf');
+    font-family: 'Kaushan Script';
+    src: url("/static/KaushanScript-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
   }
@@ -44,7 +43,7 @@ injectGlobal`
     margin: 0;
     font-size: 1.5rem;
     line-height: 2;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Kaushan Script';
   }
 `;
 
