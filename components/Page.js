@@ -45,6 +45,10 @@ injectGlobal`
     line-height: 2;
     font-family: 'Kaushan Script';
   }
+  a {
+    text-decoration: none;
+    color: ${theme.black};
+  }
 `;
 
 
