@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Item = styled.div`
-  background: white;
+  background: ${props => props.theme.lightBlue};
   border: 1px solid ${props => props.theme.offWhite};
   box-shadow: ${props => props.theme.bs};
   position: relative;

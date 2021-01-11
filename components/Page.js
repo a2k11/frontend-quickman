@@ -4,7 +4,8 @@ import Header from './Header';
 import Meta from './Meta';
 
 const theme = {
-  pink: '#ff91a4',
+  cyan: '#33F5FF',
+  lightBlue: '#8CC7EF',
   black: '#393939',
   grey: '#3A3A3A',
   lightGrey: '#E1E1E1',
@@ -14,7 +15,7 @@ const theme = {
 };
 
 const StyledPage = styled.div`
-  background: white;
+  background: lightBlue;
   color: ${props => props.theme.black};
 `;
 
