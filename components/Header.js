@@ -23,7 +23,7 @@ const Logo = styled.h1`
   a {
     padding: 0.5rem 1rem;
     background: ${props => props.theme.cyan};
-    color: white;
+    color: ${props => props.theme.black};
     text-transform: uppercase;
     text-decoration: none;
   }
