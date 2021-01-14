@@ -5,10 +5,30 @@ import Form from './styles/Form';
 import formatMoney from '../lib/formatMoney';
 
 class CreateItem extends Component {
+  state = {
+    title: '',
+    description: '',
+    image: '',
+    largeImage: '',
+    price: 0,
+  };
+
   render() {
     return (
       <Form>
-        <h2>Sell an Item.</h2>
+        <fieldset>
+          <label htmlfor="title">
+            Quick
+            <input
+              type="text"
+              id="title"
+              name="title"
+              placeholder="Title"
+              value={this.state.title}
+              required
+            />
+          </label>
+        </fieldset>
       </Form>
     )
   }
