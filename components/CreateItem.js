@@ -13,12 +13,18 @@ class CreateItem extends Component {
     price: 0,
   };
 
+  handleChange = e => {
+    const { name, type, value } = e.target;
+    const val = type === 'number' ? parseFloat(value) : value;
+    this.setState({ [name]: val });
+  };
+
   render() {
     return (
       <Form>
         <fieldset>
-          <label htmlfor="title">
-            Quick
+          <label htmlFor="title">
+            Title
             <input
               type="text"
               id="title"
@@ -26,8 +32,34 @@ class CreateItem extends Component {
               placeholder="Title"
               value={this.state.title}
               required
+              onChange={this.handleChange}
             />
           </label>
+          <label htmlFor="price">
+            Price
+            <input
+              type="number"
+              id="price"
+              name="price"
+              placeholder="Price"
+              value={this.state.price}
+              required
+              onChange={this.handleChange}
+            />
+          </label>
+          <label htmlFor="price">
+            Description
+            <textarea
+              id="description"
+              name="description"
+              placeholder="Enter a Description"
+              value={this.state.description}
+              required
+              onChange={this.handleChange}
+            />
+          </label>
+
+
         </fieldset>
       </Form>
     )

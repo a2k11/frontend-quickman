@@ -22,8 +22,8 @@ const Logo = styled.h1`
   transform: skew(-7deg);
   a {
     padding: 0.5rem 1rem;
-    background: ${props => props.theme.cyan};
-    color: ${props => props.theme.black};
+    background: ${props => props.theme.purple};
+    color: ${props => props.theme.lightBlue};
     text-transform: uppercase;
     text-decoration: none;
   }

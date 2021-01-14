@@ -4,8 +4,10 @@ import Header from './Header';
 import Meta from './Meta';
 
 const theme = {
-  cyan: '#33F5FF',
-  lightBlue: '#8CC7EF',
+  cyan: '#43E5E1',
+  lightBlue: '#80D0FA',
+  darkBlue: '#4EE543',
+  purple: '#A355D0',
   black: '#393939',
   grey: '#3A3A3A',
   lightGrey: '#E1E1E1',
@@ -15,8 +17,8 @@ const theme = {
 };
 
 const StyledPage = styled.div`
-  background: ${props => props.theme.lightBlue};
-  color: ${props => props.theme.black};
+  background: ${props => props.theme.cyan};
+  color: ${props => props.theme.purple};
 `;
 
 const Inner = styled.div`
@@ -48,7 +50,7 @@ injectGlobal`
   }
   a {
     text-decoration: none;
-    color: ${theme.black};
+    color: ${theme.purple};
   }
 `;
 
