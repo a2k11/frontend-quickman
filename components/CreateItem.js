@@ -49,7 +49,7 @@ class CreateItem extends Component {
     data.append('upload_preset', 'quickman');
 
     const response = await fetch(
-      process.env.CLOUDINARY, {
+      'https://api.cloudinary.com/v1_1/dijf4atpy/image/upload', {
       method: 'POST',
       body: data
     });
