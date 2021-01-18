@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Mutation } from 'react-apollo';
 import gql from 'graphql-tag';
-import Router from 'next/router';
 import Form from './styles/Form';
 import formatMoney from '../lib/formatMoney';
 import Error from './ErrorMessage';
@@ -43,7 +42,6 @@ class CreateItem extends Component {
 
   uploadFile = async e => {
     console.log("Uploading file");
-    console.log(process.env.NEXT_PUBLIC_CLOUDINARY);
     const files = e.target.files;
     const data = new FormData();
     data.append('file', files[0]);
@@ -63,6 +61,8 @@ class CreateItem extends Component {
   }
 
   render() {
+    const { router } = this.props;
+
     return (
       <Mutation mutation={CREATE_ITEM_MUTATION} variables={this.state}>
         {(createItem, { loading, error }) => (
@@ -70,8 +70,8 @@ class CreateItem extends Component {
             e.preventDefault();
             const res = await createItem();
 
-            Router.push({
-              pathname: '/item',
+            router.push({
+              pathname: '/item/[id]',
               query: { id: res.data.createItem.id },
             });
           }}>
