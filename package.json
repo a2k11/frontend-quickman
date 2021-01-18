@@ -17,8 +17,6 @@
     "@wojtekmaj/enzyme-adapter-react-17": "^0.4.1",
     "apollo-boost": "^0.4.9",
     "apollo-client": "^2.6.10",
-    "babel-core": "^7.0.0-bridge.0",
-    "babel-plugin-styled-components": "^1.12.0",
     "date-fns": "^2.16.1",
     "downshift": "^2.2.3",
     "enzyme": "^3.11.0",
@@ -39,8 +37,6 @@
     "waait": "^1.0.5"
   },
   "devDependencies": {
-    "babel-jest": "^23.6.0",
-    "babel-plugin-module-resolver": "^3.2.0",
     "casual": "^1.6.2",
     "enzyme-to-json": "^3.6.1",
     "graphql-tools": "^4.0.8",
@@ -57,60 +53,6 @@
       "\\.(gql|graphql)$": "jest-transform-graphql",
       ".*": "babel-jest",
       "^.+\\.js?$": "babel-jest"
-    }
-  },
-  "//": "Babel config, instead of .babelrc file",
-  "babel": {
-    "env": {
-      "development": {
-        "presets": [
-          "next/babel"
-        ],
-        "plugins": [
-          [
-            "styled-components",
-            {
-              "ssr": true,
-              "displayName": true
-            }
-          ]
-        ]
-      },
-      "production": {
-        "presets": [
-          "next/babel"
-        ],
-        "plugins": [
-          [
-            "styled-components",
-            {
-              "ssr": true,
-              "displayName": true
-            }
-          ]
-        ]
-      },
-      "test": {
-        "presets": [
-          [
-            "next/babel",
-            {
-              "preset-env": {
-                "modules": "commonjs"
-              }
-            }
-          ]
-        ],
-        "plugins": [
-          [
-            "styled-components",
-            {
-              "ssr": true,
-              "displayName": true
-            }
-          ]
-        ]
-      }
     }
   }
 }

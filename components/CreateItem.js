@@ -43,13 +43,14 @@ class CreateItem extends Component {
 
   uploadFile = async e => {
     console.log("Uploading file");
+    console.log(process.env.NEXT_PUBLIC_CLOUDINARY);
     const files = e.target.files;
     const data = new FormData();
     data.append('file', files[0]);
     data.append('upload_preset', 'quickman');
 
     const response = await fetch(
-      '', {
+      process.env.NEXT_PUBLIC_CLOUDINARY, {
       method: 'POST',
       body: data
     });
