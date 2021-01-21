@@ -54,7 +54,6 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-
 class Page extends Component {
   render() {
     return (
