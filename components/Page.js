@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
 import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
+import React, { Component } from 'react';
 import Header from './Header';
 import Meta from './Meta';
 
