@@ -29,10 +29,12 @@ const Inner = styled.div`
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
-    font-family: 'Kaushan Script';
-    src: url("/static/KaushanScript-Regular.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'Gothic A1', sans-serif;
+    src: url("/static/GothicA1-Medium.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: 'Noto Sans', sans-serif;
+    src: url("/static/NotoSans-Regular.ttf") format("truetype");
   }
   html {
     box-sizing: border-box;
@@ -46,11 +48,12 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-size: 1.5rem;
     line-height: 2;
-    font-family: 'Kaushan Script';
+    font-family: 'Noto Sans', sans-serif;
   }
   a {
     text-decoration: none;
     color: ${theme.purple};
+    font-family: 'Gothic A1', sans-serif;
   }
 `;
 
