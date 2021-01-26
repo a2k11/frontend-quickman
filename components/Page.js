@@ -50,6 +50,7 @@ const GlobalStyle = createGlobalStyle`
     line-height: 2;
     font-family: 'Noto Sans', sans-serif;
   }
+  
   a {
     text-decoration: none;
     color: ${theme.purple};
